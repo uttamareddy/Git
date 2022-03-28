@@ -1,0 +1,23 @@
+Branching strategies
+
+Git - Repositories ( Master Branch) - production code -- code which is live/deployed on the server
+
+checkout the code from master to develop branch
+
+
+To create a branch
+
+git branch Develop
+
+git checkout Develop
+
+git branch - shows the branches with * referring to the current branch
+
+
+touch file5
+
+git add file5
+git commit -m "file5"
+git push origin develop
+username: username
+token: token-id
