@@ -1,0 +1,44 @@
+git add .
+
+files will be added to staging are
+
+git commit -m "COMMIT msg"
+
+files will be added to local repository
+
+git push
+
+files will be moved to remote repository
+
+
+To create a branch
+
+git branch branchname
+
+to checkout the code to the branch
+#
+git checkout branch_name
+
+--------------------------
+
+git checkout -b branchname
+
+---------------------------
+mkdir azure
+cd azure
+-------------------------
+to initialize git repository from local
+
+git init
+touch file2 fil3
+git add .
+
+git commit -m "SOME message"
+
+git remote add origin https://github.com/BecomeDevops/azure.git
+
+git push
+
+-------------------------------------------------------------------------------------------------------------------
+This course is created as part of @BecomeDevops course
+------------------------------------------------------------------------------------------------------------------------
