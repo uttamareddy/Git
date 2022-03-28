@@ -1,0 +1,154 @@
+Agenda
+-------------------------
+-------------------------
+
+
+Branches in Git
+----------------------
+
+Git Merge
+----------------------
+
+Git Fetch
+---------------------
+
+Git pull
+---------------------
+
+Merge Conflicts in Git
+----------------------
+
+
+--------------------------
+--------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Branching Strategy in Git/ How Branching works
+-------------------------------------------------
+
+
+
+Main/Master Branch --- Here we store code that is being pushed to production server
+
+live environment ---- served by the code that is available in master branch
+
+New features will be added to the product, which means new code will be addd to the existing code
+
+
+Feature ---> Prouduct
+
+Master Branch – cworking code (existing code) + code  for a new feature
+
+code  for a new feature might result in issues, Resulting in application down time
+
+-----------------------------------------------------
+Master Branch – previous working code is already there
+
+we’ll create a new Branch
+
+
+New  Branch --- NEW code --- Testing the code on the new branch
+
+Merge----New Branch + Master Branch 
+
+Master Branch = Has the latest code 
+
+
+4 Developers are there in a team
+
+Each developer will be working on an individual features
+
+
+Each developer will their own feature branch
+
+The tickets are assigned using a jira tool
+-----------------------------------------------
+feature-123658-- Add caching mechanism 
+
+feature 123659 – add a filter in front end 
+
+
+feature-123658 --- this will the branch name created by the developer and starts working on this 
+
+feature-123658 – add the new code
+
+merge this code master branch
+
+
+How to create Branches
+------------------------------
+
+git branch branch_name
+
+ex: git branch feature-123658
+
+
+how to get / checkout in to particular branch
+
+
+git checkout branch_name
+
+
+ex: git checkout feature-123658
+
+
+-------------------------------------------------------------------------------------------------------------
+
+Inorder to create a branch and checkout to the branch, we can use a single command as well
+
+git checkout -b branch_name
+
+
+
+
+
+
+How to merge 
+---------------------------------
+
+git branch
+
+---> it will point out the current branch
+
+*feature-123658
+
+I will switch to the master branch
+
+
+git switch branchname
+
+
+git switch master
+
+switch to master branch
+
+merge feature-123658 to master branch
+
+git merge feature-123658
+
+this will merge the code from feature-123658 branch to the master branch
+
+
+
+------------------------------
+
+
+
+Branch will always points to latest commits
+
+
+------------------------------------------
+
+Git fetch – will pull the latest code from the remote repository to the local repostory
+
+but it will not merge the code to our working branch
+
+git merge
+------------------
+to merge this code to our current branch we need to use git merge, the the changes are reflected in our current branch
+
+
+git pull ----> it will fetch the code + it will also merge the code
+
+git pull ---> git fetch + git merge
