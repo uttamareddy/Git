@@ -1,0 +1,59 @@
+git clone https://github.com/BecomeDevops/tryfail.git
+  863  ls
+  864  ls -lrt
+  865  cd tryfail
+  866  ls
+  867  touch test
+  868  git status
+  869  git add .
+  870  git status
+  871  git branch
+  872  git commit -m "created test file"
+  873  git status
+  874  git branch
+  875  git status
+  876  ls
+  877  git push
+  878  git status
+  879  ls
+  880  vi log
+  881  git add .
+  882  git status
+  883  git status
+  884  git rm --cached log
+  885  git status
+  886  ls
+  887  git clean -n
+  888  git clean -f
+  889  git status
+  890  ls
+  891  ls
+  892  git status
+  893  touch index
+  894  vi ndex
+  895  git status
+  896  ls
+  897  git add .
+  898  git status
+  899  git commit -m "index files"
+  900  git log --oneline --all
+  901  git log --oneline --all --graph
+  902  LS
+  903  ls
+  904  git reset --soft HEAD~1  - this will undo the commit in local repository but its available in staging area and working directory
+  905  GIT STATUS
+  906  git status
+  907  git log --oneline --all --graph
+  908  ls
+  909  touch ec2
+  910  ls
+  911  git status
+  912  git rm --cached index ndex
+  913  git status
+  914  git add .
+  915  git status
+  916  git commit -m "added ec2, index, ndex"
+  917  git status
+  918  git log --oneline --graph --all
+  919  git reset --hard HEAD~1     -> this will undo the commit from local repo, staging area and working fdirectory
+  920  git log --oneline --graph --all
