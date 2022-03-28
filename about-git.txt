@@ -1,0 +1,285 @@
+what is git
+
+----> git is a version  control system
+
+
+track history
+work together
+it is centralized
+
+why git
+
+----> using git we can record changes and keep the track of files
+
+
+benefits over git
+
+free
+open source
+scalable
+efficeint
+
+we can revert back to previous file or previous version of the project
+
+
+version control can track not only source code but also track any plain text file
+
+time machine for your project
+--------------------------------------------
+
+commited
+
+modified
+
+staged --
+
+
+working dir,   staging area(index),  git dir (repository)
+
+uncommited changes are present in our working directory
+
+staging area - files in this state have been modified and added to be staged in next commit
+
+
+using the command line
+---------------------------
+---------------------------
+
+
+install git on windows, linux
+
+
+configure git
+initialize a new git project
+
+code hosting provider
+
+create an account
+
+push our git project to a code
+hosting provider
+
+
+commit changes from index
+
+------------------------------
+install git
+configure git
+git help
+
+initialize a new git repository
+
+push you code to cod hosting provider
+------------------------------
+Every day git commands
+
+
+by deafulat git has a master/main branch
+usually in git a branch is created towork on a new feature
+
+once the feature is deeloped, it is merged backto mastera and the bRANCH IS DELETED
+
+commit
+--------
+
+A commit is also names by SHA1 hash
+Every commit object has a pointer to the parent commit object
+from a given commit, you can traverse back by looking at the parent pointer to view the history of the commit
+
+if a commit has  multiple parent commits, then the multiple parent commit has been created by merging two branches
+
+Head -- Head is a pointer, which always points to latest commit in the branch, whenever you make a commit, head is updated with the latest commit.
+
+The heads of the branches are stored in
+.git/refs/heads/ directory
+
+ls -l .git/refs/heads/
+
+cat .git/refs/heads/master
+
+
+
+
+
+
+
+Branch
+__________
+every branch is referenced by HEAD, which points to latest commit in the branch. whenever you make a commit, HEAD is updated with the latest commit
+---------------------------------
+
+
+
+git reset ---->
+
+managing history
+
+exploring the past
+
+fixing mistakes
+
+git workflows
+  - finding your workflow
+
+cli - most of the time
+gui will implement some common scenarios
+
+four areas of git
+--------------------
+--------------------
+stash area
+working area
+index/staging - before commit
+
+Repository 
+---------------------------
+working area --- edit files
+add files
+-----------------
+ls -a
+ls .git/
+
+git objects
+-----------
+commit tree blob
+
+commit - immutable
+
+they can be created/deleted cannot modified
+
+commit - snapshot of working area
+
+each commmit to its parent commit
+
+
+each commit is a snapshot
+
+commits are slice of project history
+
+commits are linked together to form a history
+
+commit can belong to multiple branches
+
+
+HEAD and the current commit
+
+Head points to current branch and that branch points to current commit
+
+
+deleting branch will delete its commits
+
+
+workking area -> index(staging) -> repsitory 
+git status
+
+ls .git/ --> index(transition area)
+
+git status
+----------
+git diff -comparing working are and index
+
+compare index with repository --- git diff --cached
+
+how does this command move information across the four areas
+
+how does this command change the repository
+
+
+git workflows commands
+
+-----------------------
+
+git diff --cached
+------------------
+
+checkout
+
+removing files in git
+
+how to remove files for index/staging
+
+git rm filename
+git rm --cached filename
+this will undo from the staging but not from 
+the working directory
+--------------------
+git reset
+
+reset does different things in different contexts
+
+commands that move branches
+
+commit
+merge
+rebase
+pull - gets new commits from repo
+-------------------------
+
+HEAD -> MASTER
+
+head can point to the master
+git reset --hard
+
+reset - moves the to a specific commit
+
+git reset --hard (copies commit from repo to working area and index)
+
+git reset --mixed ( copies commits from repo to the index)
+
+git reset --soft(moves the branches)
+
+reset moves the current branch and optionally copies data from the repository to the other areas
+
+git reset --hard fbe356
+git moves the current branch to the previous commit
+-----------------------
+i want to undo index
+
+git rm --cached
+--> git reset HEAD -->
+    git reset --hard HEAD
+
+stashing data
+solving conflicts
+working with paths
+commiting parts of a file
+
+stash----- git stash
+
+the data is stash doesnt change unless you do want to
+
+git stash --include-untracked
+
+git stash list- store some stuff
+
+each element gets labelelled
+
+stash@{0}
+git stash apply
+
+from stash to working dir
+
+git add 
+
+
+git stash list
+
+git stash clear
+git stash list
+
+-----------------
+merge conflicts
+
+
+git branch one
+git checkout one
+
+git checkout master
+git merge one 
+
+git status
+
+ls .git
+cat .git/MERGE_HEAD
+git show commitid
+git merger origin/master
